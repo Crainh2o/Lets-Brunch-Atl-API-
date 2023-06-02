@@ -72,7 +72,9 @@ public class SpringBootTestDefinitions {
     }
 
     @When("User search by price range")
-    public void userSearchByPriceRange() {
+    public <Restaurant> void userSearchByPriceRange() {
+        int minPrice = 0;
+        int maxPrice = 0;
         List<String> matchingRestaurants = getRestaurantsByPriceRange(minPrice, maxPrice);
 
         // Printing the matching restaurants
@@ -80,8 +82,8 @@ public class SpringBootTestDefinitions {
             System.out.println("No restaurants found within the price range: $" + minPrice + " - $" + maxPrice);
         } else {
             System.out.println("Restaurants within the price range: $" + minPrice + " - $" + maxPrice);
-            for (Restaurant restaurant : matchingRestaurants) {
-                System.out.println(restaurant.getName() + " (" + restaurant.getPrice() + ")");
+            for (String restaurant : matchingRestaurants) {
+                System.out.println(restaurant.length());
             }
         }
     }
@@ -94,11 +96,7 @@ public class SpringBootTestDefinitions {
         List<Restaurant> allRestaurants = getRestaurantList();
 
         for (Restaurant restaurant : allRestaurants) {
-            int price = restaurant.getPrice();
-
-            if (price >= minPrice && price <= maxPrice) {
-                matchingRestaurants.add(restaurant);
-            }
+            boolean price = restaurant.equals(getRestaurantsByPriceRange(minPrice, maxPrice));
         }
 
         return matchingRestaurants;
