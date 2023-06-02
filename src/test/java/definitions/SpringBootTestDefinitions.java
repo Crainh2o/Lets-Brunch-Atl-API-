@@ -1,6 +1,7 @@
 package definitions;
 
 import com.example.demo.LetsBrunchInAtlantaApplication;
+import com.example.demo.model.BrunchPlaces;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -72,6 +73,47 @@ public class SpringBootTestDefinitions {
 
     @When("User search by price range")
     public void userSearchByPriceRange() {
+        List<String> matchingRestaurants = getRestaurantsByPriceRange(minPrice, maxPrice);
 
+        // Printing the matching restaurants
+        if (matchingRestaurants.isEmpty()) {
+            System.out.println("No restaurants found within the price range: $" + minPrice + " - $" + maxPrice);
+        } else {
+            System.out.println("Restaurants within the price range: $" + minPrice + " - $" + maxPrice);
+            for (Restaurant restaurant : matchingRestaurants) {
+                System.out.println(restaurant.getName() + " (" + restaurant.getPrice() + ")");
+            }
+        }
     }
+
+    public static <Restaurant> List<Restaurant> getRestaurantsByPriceRange(int minPrice, int maxPrice) {
+        // Simulating the retrieval of restaurants within the price range
+        List<Restaurant> matchingRestaurants = new ArrayList<>();
+
+        // Simulated restaurant data
+        List<Restaurant> allRestaurants = getRestaurantList();
+
+        for (Restaurant restaurant : allRestaurants) {
+            int price = restaurant.getPrice();
+
+            if (price >= minPrice && price <= maxPrice) {
+                matchingRestaurants.add(restaurant);
+            }
+        }
+
+        return matchingRestaurants;
+    }
+
+    private static <Restaurant> List<Restaurant> getRestaurantList() {
+        List<String> brunchPlaces = new ArrayList<>();
+
+        brunchPlaces.add("Sunday Brunch Atl");
+        brunchPlaces.add("Breakfast At Barney's");
+        brunchPlaces.add("Atlanta Breakfast Club");
+
+        return (List<Restaurant>) brunchPlaces;
+    }
+
+
 }
+
