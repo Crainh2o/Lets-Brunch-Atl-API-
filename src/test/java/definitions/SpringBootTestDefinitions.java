@@ -2,6 +2,8 @@ package definitions;
 
 import com.example.demo.LetsBrunchInAtlantaApplication;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -30,6 +32,46 @@ public class SpringBootTestDefinitions {
     }
 
     @Given("A list of restaurants exist")
-    public void aListOfRestaurantsExist() {
+    public List<String> aListOfRestaurantsExist() {
+        List<String> brunchPlaces = new ArrayList<>();
+
+        brunchPlaces.add("Sunday Brunch Atl");
+        brunchPlaces.add("Breakfast At Barney's");
+        brunchPlaces.add("Atlanta Breakfast Club");
+
+        return brunchPlaces;
+
+    }
+
+    @When("User search by cuisine")
+    public void userSearchByCuisine() {
+        String cuisine = "Soul Food";
+        List<String> brunchPlacesNearby = getBrunchPlacesNearby();
+        if (getBrunchPlacesNearby().isEmpty()) {
+            System.out.println("No restaurants found for cuisine: " + cuisine);
+        } else {
+            System.out.println("Restaurants for cuisine: " + cuisine);
+            for (String brunchPlaces : getBrunchPlacesNearby()) {
+                System.out.println(brunchPlaces);
+            }
+        }
+
+    }
+
+    @Then("then user see brunch restaurants")
+    public List<String> thenUserSeeBrunchRestaurants() {
+        List<String> brunchPlaces = new ArrayList<>();
+
+        brunchPlaces.add("Sunday Brunch Atl");
+        brunchPlaces.add("Breakfast At Barney's");
+        brunchPlaces.add("Atlanta Breakfast Club");
+
+        return brunchPlaces;
+
+    }
+
+    @When("User search by price range")
+    public void userSearchByPriceRange() {
+
     }
 }
