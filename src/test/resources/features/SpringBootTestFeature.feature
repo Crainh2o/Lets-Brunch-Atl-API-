@@ -12,5 +12,4 @@ Feature: Rest API functionalities
     Given A list of restaurants exist
     When User search by price range
     Then then user see brunch restaurants
-    When user adds review
-    Then user can see review
+

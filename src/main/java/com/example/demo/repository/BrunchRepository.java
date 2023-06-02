@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BrunchRepository extends JpaRepository<BrunchPlaces, Long> {
+    BrunchPlaces findByMenuIdAndName(Long menuId, String brunchName);
 }

@@ -3,10 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.model.BrunchPlaces;
 import com.example.demo.repository.BrunchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -29,6 +26,11 @@ public class BrunchController {
    @GetMapping(path = "/brunchPlaces/{brunchId}")
     public Optional<BrunchPlaces> getBrunchPlace(@PathVariable Long brunchId) {
        return brunchRepository.findById(brunchId);
+   }
+
+   @GetMapping(path = "/brunchPlaces/{brunchName}/{menuId}")
+    public BrunchPlaces getBrunchMenu(@PathVariable String brunchName, @PathVariable Long menuId) {
+       return brunchRepository.findByMenuIdAndName(menuId, brunchName);
    }
 
 }
