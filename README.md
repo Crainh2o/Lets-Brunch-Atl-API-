@@ -33,8 +33,8 @@ As a user, I want to be able to leave a review or rating for a brunch restaurant
 
 I chose only three brunch places but the user will be able to choose a brunch place my price, location, and menu. I used google sheets for my planning process. The slide for 
 my user stories is below.
-![Screenshot 2023-06-05 at 5 18 27 PM](https://github.com/Crainh2o/Lets-Brunch-Atl-API-/assets/124539081/6784aeb4-6da2-47ed-ac13-820bac82c![Screenshot 2023-06-05 at 5 20 22 PM](https://github.com/Crainh2o/Lets-Brunch-Atl-API-/assets/124539081/c9b665d9-49ef-4e23-8153-1fa4d7540599)
-996)
+
+![Screenshot 2023-06-05 at 5 18 27 PM]
 
 # ERD Diagram 
 
