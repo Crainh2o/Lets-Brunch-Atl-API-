@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.BrunchPlaces;
+import com.example.demo.model.Menu;
 import com.example.demo.repository.BrunchRepository;
+import com.example.demo.service.BrunchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,26 +14,22 @@ import java.util.Optional;
 @RequestMapping(path = "/api")
 public class BrunchController {
 
-    private BrunchRepository brunchRepository;
-
-   @Autowired
-    public void setBrunchRepository(BrunchRepository brunchRepository) {
-        this.brunchRepository = brunchRepository;
-   }
+    @Autowired
+    BrunchService brunchService;
 
    @GetMapping(path = "/brunchPlaces/")
     public List<BrunchPlaces> getBrunchPlaces() {
-       return brunchRepository.findAll();
+       return brunchService.getBrunchPlaces();
    }
 
    @GetMapping(path = "/brunchPlaces/{brunchId}")
     public Optional<BrunchPlaces> getBrunchPlace(@PathVariable Long brunchId) {
-       return brunchRepository.findById(brunchId);
+       return brunchService.getBrunchPlace(brunchId);
    }
 
-   @GetMapping(path = "/brunchPlaces/{brunchName}/{menuId}")
-    public BrunchPlaces getBrunchMenu(@PathVariable String brunchName, @PathVariable Long menuId) {
-       return brunchRepository.findByMenuIdAndName(menuId, brunchName);
+   @GetMapping(path = "/brunchPlaces/{brunchId}/menu")
+    public Menu getBrunchMenu(@PathVariable Long brunchId) {
+       return brunchService.getBrunchMenu(brunchId);
    }
 
 }

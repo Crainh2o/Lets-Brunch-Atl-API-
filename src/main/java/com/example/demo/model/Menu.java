@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "menu")
@@ -17,6 +18,8 @@ public class Menu {
     @Column
     private String menu_URL;
 
+    @OneToMany(mappedBy = "menu")
+    private List<BrunchPlaces> brunchPlacesList;
 
     public Menu(Long id, Double price, String menuUrl) {
         this.id = id;
@@ -50,6 +53,15 @@ public class Menu {
 
     public void setMenu_URL(String menu_URL) {
         this.menu_URL = menu_URL;
+    }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "id=" + id +
+                ", price=" + price +
+                ", menu_URL='" + menu_URL + '\'' +
+                '}';
     }
 }
 

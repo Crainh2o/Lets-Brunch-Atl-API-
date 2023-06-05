@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "brunchplaces")
+@Table(name = "brunch_places")
 public class BrunchPlaces {
 
     @Id
@@ -67,5 +67,24 @@ public class BrunchPlaces {
 
     public Long getId() {
         return id;
+    }
+
+    public Menu getMenu() {
+        return menu;
+    }
+
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
+
+    @Override
+    public String toString() {
+        return "BrunchPlaces{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", review='" + review + '\'' +
+                ", menu=" + menu +
+                '}';
     }
 }
