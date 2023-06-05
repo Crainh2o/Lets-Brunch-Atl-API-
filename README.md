@@ -137,8 +137,16 @@ In order to use this codebase you will need to ake sure yu have the following de
     
 # Rest API Endpoints
 
+| HTTP Methods| Full URL                                       | URL                   | Functionality                         |   
+|-------------|------------------------------------------------|-----------------------|---------------------------------------|
+|  Get        | http://localhost:8080/api/brunchPlaces/        | /brunchPlaces/        | Get all Brunch Places                 |   
+|  Get        | http://localhost:8080/api/brunchPlaces/1/      | /brunchPlaces/1/      | Get Brunch Place by Id                |   
+| Get         | http://localhost:8080/api/brunchPlaces/1/menu/ | /brunchPlaces/1/menu/ | Get Brunch Menu by Place and Menu Id  |   
 
-    
+
+## Credits 
+
+Thank you to Rachel, Trevor, and Max for all the help. 
 
     
 
