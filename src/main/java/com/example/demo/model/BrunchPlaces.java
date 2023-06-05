@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -20,6 +22,10 @@ public class BrunchPlaces {
     @Column
     private String review;
 
+    @ManyToOne
+    @JoinColumn(name = "menu_id")
+    @JsonIgnore
+    private Menu menu;
 
     public BrunchPlaces() {
     }

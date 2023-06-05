@@ -18,6 +18,7 @@ public class BrunchController {
     public void setBrunchRepository(BrunchRepository brunchRepository) {
         this.brunchRepository = brunchRepository;
    }
+
    @GetMapping(path = "/brunchPlaces/")
     public List<BrunchPlaces> getBrunchPlaces() {
        return brunchRepository.findAll();
