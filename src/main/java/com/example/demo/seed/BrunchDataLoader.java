@@ -24,6 +24,12 @@ public class BrunchDataLoader implements CommandLineRunner {
         BrunchPlaces brunchPlaces2 = new BrunchPlaces(2L, "Breakfast At Barney’s", "349 Decatur St. NE Unit A1, Atlanta, GA 30312", "The next closest thing is the vibe and the service which is top notch." );
         BrunchPlaces brunchPlaces3 = new BrunchPlaces(3L, "Atlanta Breakfast Club", "249 Ivan Allen Jr Blvd NW, Atlanta, GA 30313", "Great place to visit great atmosphere great food great service great owner.");
 
+        brunchRepository.save(menu1);
+        brunchRepository.save(menu2);
+        brunchRepository.save(menu3);
+
+
+
 
     }
 }
