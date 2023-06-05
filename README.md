@@ -43,6 +43,102 @@ https://online.visual-paradigm.com/app/diagrams/#diagram:proj=0&type=ERDiagram&w
 
 ![Screenshot 2023-06-05 at 5 20 22 PM](https://github.com/Crainh2o/Lets-Brunch-Atl-API-/assets/124539081/d167d7ce-8b18-4f05-a657-2832fff5190e)
 
+# Planning 
+
+My goal was to have the back end done by end of day Monday June 5. We started the project Wednesday May 31st. I didn't do a timeline by days but I used a Kanban board to help me organize everything I needed to do for the back end of the Brunch API. I also used google slides to plan out my entire project. 
+
+https://docs.google.com/presentation/d/1gSl3Fc2rOrjJYbE7zULuXbAfmcVDRBVzIEGij17jbX8/edit#slide=id.g24d03e3a1db_0_100
+
+![Screenshot 2023-06-05 at 5 26 25 PM](https://github.com/Crainh2o/Lets-Brunch-Atl-API-/assets/124539081/3ec51b2e-807d-45d9-a6ed-449c11704660)
+
+# Installation Instructions/ Dependencies 
+
+In order to use this codebase you will need to ake sure yu have the following dependencies in your pom.xml file:
+
+```
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-rest</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <scope>runtime</scope>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-spring</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>4.3.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>3.0.5</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    ```
+    In order to successfully replicate/ run Cucumber Tests you will need to add this property to your pom.xml property tag:
+    
+    ``<cucumber.version>6.8.1</cucumber.version>``
+    
+    # Rest API enpoints 
+    
+
+
+
+
 
 
 
