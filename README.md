@@ -9,7 +9,7 @@ With me being a wife and mom of two, brunch is great way for me to hang out with
 - ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 - ![IntelliJ](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 - [ERD Tool](https://www.lucidchart.com/)
-- **Postman** - testing DB requests![Screenshot 2023-06-05 at 5 01 19 PM](https://github.com/Crainh2o/Lets-Brunch-Atl-API-/assets/124539081/9cb27adc-8386-43cd-b756-ce53ad76e07d)
+- **Postman** - testing DB requests
 
 
 # Testing 
