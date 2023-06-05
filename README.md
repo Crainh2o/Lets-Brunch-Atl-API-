@@ -129,9 +129,10 @@ In order to use this codebase you will need to ake sure yu have the following de
         <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
     ```
+    
     In order to successfully replicate/ run Cucumber Tests you will need to add this property to your pom.xml property tag:
     
-    ``<cucumber.version>6.8.1</cucumber.version>``
+    <cucumber.version>6.8.1</cucumber.version>
     
    
 
