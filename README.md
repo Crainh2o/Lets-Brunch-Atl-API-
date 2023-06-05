@@ -133,11 +133,6 @@ In order to use this codebase you will need to ake sure yu have the following de
     
     ``<cucumber.version>6.8.1</cucumber.version>``
     
-## Credits
-* Referred back to Java Spring Boot Lesson for explanations: https://git.generalassemb.ly/sureshmelvinsigera/Java-Spring-Boot-lecture/tree/spring-2-7-8
-* [JAVA API](https://docs.oracle.com/en/java/javase/17/docs/api/index.html)
-* [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/)
-
    
 
 
