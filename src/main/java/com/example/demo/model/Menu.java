@@ -14,12 +14,18 @@ public class Menu {
     @Column
     private Double price;
 
-    public Menu() {
-    }
+    @Column
+    private String menu_URL;
 
-    public Menu(Long id, Double price) {
+
+    public Menu(Long id, Double price, String menuUrl) {
         this.id = id;
         this.price = price;
+        this.menu_URL = menuUrl;
+    }
+
+    public Menu() {
+
     }
 
     public Long getId() {
@@ -37,4 +43,13 @@ public class Menu {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    public String getMenu_URL() {
+        return menu_URL;
+    }
+
+    public void setMenu_URL(String menu_URL) {
+        this.menu_URL = menu_URL;
+    }
 }
+
