@@ -18,21 +18,32 @@ public class Menu {
     private Double price;
 
     @Column
-    private String name;
+    private String menu_URL;
 
     @OneToMany(mappedBy = "menu")
     @JsonIgnore
     private List<BrunchPlaces> brunchPlacesList;
 
-
-    public void setName(String name) {
-        this.name = name;
+    public String getMenu_URL() {
+        return menu_URL;
     }
 
-    public Menu(Long id, Double price, String name) {
+    public void setMenu_URL(String menu_URL) {
+        this.menu_URL = menu_URL;
+    }
+
+    public List<BrunchPlaces> getBrunchPlacesList() {
+        return brunchPlacesList;
+    }
+
+    public void setBrunchPlacesList(List<BrunchPlaces> brunchPlacesList) {
+        this.brunchPlacesList = brunchPlacesList;
+    }
+
+    public Menu(Long id, Double price, String menu_URL) {
         this.id = id;
         this.price = price;
-        this.name = name;
+        this.menu_URL = menu_URL;
     }
 
     public Menu() {
@@ -55,20 +66,14 @@ public class Menu {
         this.price = price;
     }
 
-    public String getMenu_URL() {
-        return name;
-    }
 
-    public void setMenu_URL(String menu_URL) {
-        this.name = menu_URL;
-    }
 
     @Override
     public String toString() {
         return "Menu{" +
                 "id=" + id +
                 ", price=" + price +
-                ", menu_URL='" + name + '\'' +
+                ", menu_URL='" + menu_URL + '\'' +
                 '}';
     }
 }
