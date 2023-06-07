@@ -18,16 +18,21 @@ public class Menu {
     private Double price;
 
     @Column
-    private String menu_URL;
+    private String name;
 
     @OneToMany(mappedBy = "menu")
     @JsonIgnore
     private List<BrunchPlaces> brunchPlacesList;
 
-    public Menu(Long id, Double price, String menuUrl) {
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Menu(Long id, Double price, String name) {
         this.id = id;
         this.price = price;
-        this.menu_URL = menuUrl;
+        this.name = name;
     }
 
     public Menu() {
@@ -51,11 +56,11 @@ public class Menu {
     }
 
     public String getMenu_URL() {
-        return menu_URL;
+        return name;
     }
 
     public void setMenu_URL(String menu_URL) {
-        this.menu_URL = menu_URL;
+        this.name = menu_URL;
     }
 
     @Override
@@ -63,7 +68,7 @@ public class Menu {
         return "Menu{" +
                 "id=" + id +
                 ", price=" + price +
-                ", menu_URL='" + menu_URL + '\'' +
+                ", menu_URL='" + name + '\'' +
                 '}';
     }
 }
