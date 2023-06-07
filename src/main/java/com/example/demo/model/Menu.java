@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class Menu {
     private String menu_URL;
 
     @OneToMany(mappedBy = "menu")
+    @JsonIgnore
     private List<BrunchPlaces> brunchPlacesList;
 
     public Menu(Long id, Double price, String menuUrl) {
