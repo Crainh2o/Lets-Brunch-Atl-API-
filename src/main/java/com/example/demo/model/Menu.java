@@ -24,10 +24,26 @@ public class Menu {
     @JsonIgnore
     private List<BrunchPlaces> brunchPlacesList;
 
-    public Menu(Long id, Double price, String menuUrl) {
+    public String getMenu_URL() {
+        return menu_URL;
+    }
+
+    public void setMenu_URL(String menu_URL) {
+        this.menu_URL = menu_URL;
+    }
+
+    public List<BrunchPlaces> getBrunchPlacesList() {
+        return brunchPlacesList;
+    }
+
+    public void setBrunchPlacesList(List<BrunchPlaces> brunchPlacesList) {
+        this.brunchPlacesList = brunchPlacesList;
+    }
+
+    public Menu(Long id, Double price, String menu_URL) {
         this.id = id;
         this.price = price;
-        this.menu_URL = menuUrl;
+        this.menu_URL = menu_URL;
     }
 
     public Menu() {
@@ -50,13 +66,7 @@ public class Menu {
         this.price = price;
     }
 
-    public String getMenu_URL() {
-        return menu_URL;
-    }
 
-    public void setMenu_URL(String menu_URL) {
-        this.menu_URL = menu_URL;
-    }
 
     @Override
     public String toString() {

@@ -25,9 +25,9 @@ public class BrunchDataLoader implements CommandLineRunner {
 
     private void loadBrunchData() {
         if (brunchRepository.count() == 0);
-        Menu menu1 = new Menu(1L, 39.99, "https://www.sundaybrunchatl.com/" );
-        Menu menu2 = new Menu(2L, 50.00, "https://www.breakfastatbarneys.com");
-        Menu menu3 = new Menu(3L, 80.00, "https://www.atlbreakfastclub.com");
+        Menu menu1 = new Menu(1L, 39.99, "https://www.sundaybrunchatl.com/menus" );
+        Menu menu2 = new Menu(2L, 50.00, "https://www.breakfastatbarneys.com/menu");
+        Menu menu3 = new Menu(3L, 80.00, "https://www.atlbreakfastclub.com/menu");
 
 
         BrunchPlaces brunchPlaces1 = new BrunchPlaces(1L, "Sunday Brunch Atl", "3402 Piedmont RD NE, Atlanta, GA 30305", "Super clean and the ENERGY is flawless Def a must see if in town" );
