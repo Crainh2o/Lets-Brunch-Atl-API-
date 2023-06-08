@@ -146,7 +146,11 @@ In order to use this codebase you will need to ake sure yu have the following de
 
 ## Credits 
 
-Thank you to Rachel, Trevor, and Max for all the help. 
+Thank you to Rachel, Trevor, and Max for all the help. Their github links are below.
+
+Rachel: https://github.com/rjehrlich
+Trevor: https://github.com/t-hendricks
+Max: https://github.com/maklaut007
 
     
 
